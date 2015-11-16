@@ -33,7 +33,7 @@ namespace g0rdan.Utilities
         /// Возвращает только числа из строки
         /// </summary>
         /// <returns>The numbers.</returns>
-        public static int GetConcatNumbers(this string value)
+        public static string GetConcatNumbers(this string value)
         {
             return new String(value.ToCharArray().Where(c => Char.IsDigit(c)).ToArray());
         }
