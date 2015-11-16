@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Linq;
 
 namespace g0rdan.Utilities
 {
@@ -18,6 +19,23 @@ namespace g0rdan.Utilities
             }
 
             return value;
+        }
+
+        /// <summary>
+        /// Check if any "options" of empty in strings
+        /// </summary>
+        public static bool IsEmpty(this string text)
+        {
+            return string.IsNullOrWhiteSpace(text);
+        }
+
+        /// <summary>
+        /// Возвращает только числа из строки
+        /// </summary>
+        /// <returns>The numbers.</returns>
+        public static int GetConcatNumbers(this string value)
+        {
+            return new String(value.ToCharArray().Where(c => Char.IsDigit(c)).ToArray());
         }
     }
 }
