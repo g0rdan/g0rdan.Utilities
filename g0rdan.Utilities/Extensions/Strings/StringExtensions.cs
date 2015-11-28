@@ -65,6 +65,11 @@ namespace g0rdan.Utilities
         /// <param name="value">Строка, которую нужно перевернуть</param>
         public static string Revert(this string value)
         {
+            if (IsEmpty(value))
+            {
+                return string.Empty;
+            }
+
             var str = new StringBuilder(value);
             int strLength = str.Length;
 
