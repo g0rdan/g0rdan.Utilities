@@ -37,6 +37,27 @@ namespace g0rdan.Utilities
         {
             return new String(value.ToCharArray().Where(c => Char.IsDigit(c)).ToArray());
         }
+
+        /// <summary>
+        /// Метод возвращает строку с первой заглавной буквой
+        /// </summary>
+        /// <returns>string</returns>
+        /// <param name="value">Строка, которую мы хотим изменить</param>
+        /// <param name="makeAllOtherLower">Если все буквы в капсе, ставим true</param>
+        public static string UppercaseFirst (this string value, bool makeAllOtherLower = false)
+        {
+            if (IsEmpty(value))
+            {
+                return string.Empty;
+            }
+
+            if (makeAllOtherLower)
+            {
+                value = value.ToLower();
+            }
+
+            return char.ToUpper(value[0]) + value.Substring(1);
+        }
     }
 }
 
