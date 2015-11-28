@@ -58,6 +58,25 @@ namespace g0rdan.Utilities
 
             return char.ToUpper(value[0]) + value.Substring(1);
         }
+
+        /// <summary>
+        /// Возвращает перевернутую строку. Пример: "Денис" -> "синеД"
+        /// </summary>
+        /// <param name="value">Строка, которую нужно перевернуть</param>
+        public static string Revert(this string value)
+        {
+            var str = new StringBuilder(value);
+            int strLength = str.Length;
+
+            for (int i = 0; i < strLength / 2; i++)
+            {
+                char currentLeftLetter = str[i];
+                char currentRightLetter = str[strLength - 1 - i];
+                str[i] = currentRightLetter;
+                str[strLength - 1 - i] = currentLeftLetter;
+            }
+            return str.ToString();
+        }
     }
 }
 
