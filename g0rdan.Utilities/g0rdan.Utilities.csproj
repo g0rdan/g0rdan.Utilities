@@ -34,6 +34,7 @@
     <Compile Include="Extensions\Strings\StringExtensions.cs" />
     <Compile Include="Extensions\Json\JsonHelper.cs" />
     <Compile Include="Extensions\DateTime\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\Stream\StreamExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -41,6 +42,7 @@
     <Folder Include="Extensions\Strings\" />
     <Folder Include="Extensions\Json\" />
     <Folder Include="Extensions\DateTime\" />
+    <Folder Include="Extensions\Stream\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
